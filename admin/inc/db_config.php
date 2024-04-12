@@ -76,10 +76,9 @@
                 mysqli_stmt_close($stmt);
                 return $res;
             }
-            else
-            {   
+            else {   
                 mysqli_stmt_close($stmt);
-                die("QUERRY can't be executed - INSERT");
+                die("QUERRY can't be executed - INSERT. Error: " . mysqli_stmt_error($stmt));
             }
         }
         else{
